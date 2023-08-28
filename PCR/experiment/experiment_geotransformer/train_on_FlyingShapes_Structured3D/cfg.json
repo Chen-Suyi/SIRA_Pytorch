@@ -136,7 +136,7 @@
     },
     "num_epochs": 40,
     "optimizer_name": "adam",
-    "learning_rate": 0.000005,
+    "learning_rate": 0.0001,
     "weight_decay": 1e-06,
     "scheduler_name": "step",
     "decay_steps": 1,
