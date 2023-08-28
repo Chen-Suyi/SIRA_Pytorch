@@ -1,0 +1,155 @@
+{
+    "bucket_name": "xhdata",
+    "dataset_name": "3dmatch",
+    "model_name": "geotransformer",
+    "loss_name": "geotransformer",
+    "major_metric": "score",
+    "data": {
+        "dataset_root": "./dataset",
+        "gt_log": "",
+        "split_type": "",
+        "scene_num": 0,
+        "train_scene_num": 0,
+        "test_scene_num": 0,
+        "train_scene_indices": null,
+        "test_scene_indices": null,
+        "augmentation_rotation_type": "eular",
+        "augmentation_translation_type": "cube",
+        "augmentation_noise_type": "origin"
+    },
+    "train": {
+        "batch_size": 1,
+        "num_workers": 8,
+        "subset": "train",
+        "voxel_size": null,
+        "sphere_limit": null,
+        "point_limit": 30000,
+        "use_augmentation": true,
+        "augmentation_noise": 0.005,
+        "augmentation_rotation": 1.0,
+        "augmentation_translation": 5.0
+    },
+    "val": {
+        "batch_size": 1,
+        "num_workers": 6,
+        "subset": "val",
+        "voxel_size": null,
+        "sphere_limit": null,
+        "point_limit": 30000,
+        "use_augmentation": true,
+        "augmentation_noise": 0.005,
+        "augmentation_rotation": 1.0,
+        "augmentation_translation": 5.0
+    },
+    "test": {
+        "batch_size": 1,
+        "num_workers": 8,
+        "subset": "3DMatch",
+        "voxel_size": null,
+        "sphere_limit": null,
+        "point_limit": 30000,
+        "use_augmentation": true,
+        "augmentation_noise": 0.005,
+        "augmentation_rotation": 1.0,
+        "augmentation_translation": 5.0
+    },
+    "eval": {
+        "acceptance_overlap": 0.0,
+        "acceptance_radius": 0.1,
+        "inlier_ratio_threshold": 0.05,
+        "acceptance_rmse": 0.2,
+        "rre_threshold": 15.0,
+        "rte_threshold": 0.3
+    },
+    "ransac": {
+        "distance_threshold": 0.05,
+        "num_points": 3,
+        "num_iterations": 50000
+    },
+    "backbone": {
+        "num_stages": 4,
+        "init_voxel_size": 0.025,
+        "kernel_size": 15,
+        "base_radius": 2.5,
+        "base_sigma": 2.0,
+        "init_radius": 0.0625,
+        "init_sigma": 0.05,
+        "group_norm": 32,
+        "input_dim": 1,
+        "init_dim": 64,
+        "output_dim": 256
+    },
+    "model": {
+        "ground_truth_matching_radius": 0.05,
+        "num_points_in_patch": 64,
+        "num_sinkhorn_iterations": 100
+    },
+    "coarse_matching": {
+        "num_targets": 128,
+        "overlap_threshold": 0.1,
+        "num_correspondences": 256,
+        "dual_normalization": true
+    },
+    "geotransformer": {
+        "input_dim": 1024,
+        "hidden_dim": 256,
+        "output_dim": 256,
+        "num_heads": 4,
+        "blocks": [
+            "self",
+            "cross",
+            "self",
+            "cross",
+            "self",
+            "cross"
+        ],
+        "sigma_d": 0.2,
+        "sigma_a": 15,
+        "angle_k": 3,
+        "reduction_a": "max"
+    },
+    "fine_matching": {
+        "topk": 3,
+        "acceptance_radius": 0.1,
+        "mutual": true,
+        "confidence_threshold": 0.05,
+        "use_dustbin": false,
+        "use_global_score": false,
+        "correspondence_threshold": 3,
+        "correspondence_limit": null,
+        "num_refinement_steps": 5
+    },
+    "coarse_loss": {
+        "positive_margin": 0.1,
+        "negative_margin": 1.4,
+        "positive_optimal": 0.1,
+        "negative_optimal": 1.4,
+        "log_scale": 24,
+        "positive_overlap": 0.1
+    },
+    "fine_loss": {
+        "positive_radius": 0.05
+    },
+    "loss": {
+        "weight_coarse_loss": 1.0,
+        "weight_fine_loss": 1.0
+    },
+    "num_epochs": 20,
+    "optimizer_name": "adam",
+    "learning_rate": 0.000005,
+    "weight_decay": 1e-06,
+    "scheduler_name": "step",
+    "decay_steps": 1,
+    "gamma": 0.95,
+    "save_mode": "local",
+    "save_summary_steps": 10,
+    "save_latest_freq": 1,
+    "save_best_after": -1,
+    "num_workers": 12,
+    "virtual_env": true,
+    "cpu": 12,
+    "exp_name": "geotransformer-finetune_on_3DMatch",
+    "gpu": 4,
+    "memory": 20480,
+    "model_dir": "experiment/experiment_geotransformer/finetune_on_3DMatch"
+}

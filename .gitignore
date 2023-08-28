@@ -1,0 +1,30 @@
+# 
+build
+*.egg-info
+*.so
+**/__pycache__
+
+# pretrained weights
+PCR/weights/*
+
+# dataset
+PCR/dataset/3DMatch/data/*
+PCR/dataset/ETH/*
+PCR/dataset/FlyingShapes/*
+PCR/dataset/Mixture/*
+PCR/dataset/SIRA/*
+PCR/dataset/Structured3D/*
+PCR/dataset/synth2real
+
+!PCR/**/gt.log
+
+# experiment
+PCR/experiment/experiment_geotransformer/finetune_on_3DMatch/*
+PCR/experiment/experiment_geotransformer/finetune_on_SIRA/*
+PCR/experiment/experiment_geotransformer/test_on_ETH/*
+PCR/experiment/experiment_geotransformer/train_on_FlyingShapes/*
+PCR/experiment/experiment_geotransformer/train_on_FlyingShapes_Structured3D/*
+
+!PCR/**/cfg.json
+
+SIRA/experiment/synth2real/*
