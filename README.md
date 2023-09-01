@@ -6,7 +6,11 @@ This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](./files/fina
 Our dataset will be released soon.
 
 ## Pre-trained Weights
-Our pre-trained weights will be released soon.
+We provide pre-trained weights on the [releases](https://github.com/Chen-Suyi/SIRA_Pytorch/releases) page.
+
+- `weights.zip` contains the pre-trained weights for point cloud registration.<br>Please unzip and put it to `SIRA-PCR/PCR/weights`.
+
+- `ckpt.zip` contains the pre-trained weights for sim-to-real adaptation.<br>Please unzip and put it to `SIRA-PCR/SIRA/experiment/synth2real/ckpt`.
 
 ## Training
 ### Training on synthetic data
