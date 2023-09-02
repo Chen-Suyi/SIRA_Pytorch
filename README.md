@@ -3,7 +3,24 @@
 This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](./files/final_version.pdf).
 
 ## Data Preparation
-Our dataset will be released soon.
+The 3DMatch data can be downloaded from [OverlapPredator](https://github.com/prs-eth/OverlapPredator) by running:
+```
+wget --no-check-certificate --show-progress https://share.phys.ethz.ch/~gsg/pairwise_reg/3dmatch.zip
+```
+
+Please unzip and put it in `SIRA-PCR/PCR/dataset/3DMatch/data`
+The data should be organized as follows:
+```
+--dataset--3DMatch--metadata
+                 |--data--train--7-scenes-chess--cloud_bin_0.ply
+                       |      |               |--...
+                       |      |--...
+                       |--test--7-scenes-redkitchen--cloud_bin_0.ply
+                             |                    |--...
+                             |--...
+```
+
+Other datasets will be released soon.
 
 ## Pre-trained Weights
 We provide pre-trained weights on the [releases](https://github.com/Chen-Suyi/SIRA_Pytorch/releases) page.
