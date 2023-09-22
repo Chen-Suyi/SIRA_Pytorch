@@ -22,9 +22,9 @@ The data should be organized as follows:
 ```
 
 ### FlyingShapes
-The FlyingShapes data can be downloaded from [here](https://1drv.ms/f/s!Aplan7-8_DG1gVrkdBfWi2xBQZvz?e=GFDqyo).
-Please unzip and put it in `SIRA-PCR/PCR/dataset/FlyingShapes`
-The data should be organized as follows:
+The FlyingShapes data can be downloaded from [here](https://1drv.ms/f/s!Aplan7-8_DG1gVrkdBfWi2xBQZvz?e=GFDqyo).  
+Please unzip and put it in `SIRA-PCR/PCR/dataset/FlyingShapes`  
+The data should be organized as follows:  
 ```
 --dataset--FlyingShapes--gt.log
                                                 |--0a71be67-5024-4b9c-a53f-da0aaa294963--depth_exr--cam0_theta0_phi0--pc.ply
@@ -33,25 +33,25 @@ The data should be organized as follows:
                                                 |                                                                                       |--... 
                                                 |--...
 ```
-where the point cloud `pc.ply` is used for point cloud registration training, and the point cloud `pc_tsdf.ply` is used as the input of sim-to-real adaptation.
+where the point cloud `pc.ply` is used for point cloud registration training, and the point cloud `pc_tsdf.ply` is used as the input of sim-to-real adaptation.  
 
 ### Structured3D
-The Structured3D data can be downloaded from [here](https://1drv.ms/f/s!Aplan7-8_DG1gVuDz9IZ89QBBLQ9?e=pSHTdu).
-Please unzip and put it in `SIRA-PCR/PCR/dataset/Structured3D`
-The data should be organized as follows:
+The Structured3D data can be downloaded from [here](https://1drv.ms/f/s!Aplan7-8_DG1gVuDz9IZ89QBBLQ9?e=pSHTdu).  
+Please unzip and put it in `SIRA-PCR/PCR/dataset/Structured3D`  
+The data should be organized as follows:  
 ```
 --dataset--Structured3D--gt.log
                                                 |--scene_00000--485142_0--pc.ply
                                                 |                             |-- ...
                                                 |--...
 ```
-Other datasets will be released soon.
+Other datasets will be released soon.  
 
 ### SIRA
-The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data.
-It can be downloaded from [here](https://1drv.ms/u/s!Aplan7-8_DG1gUCmsMru6F32i6hT?e=Llw1rp)
-Please unzip and put it in `SIRA-PCR/PCR/dataset/SIRA`
-The data should be  organized as follows:
+The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data. For more details, please refer to our [paper](./files/final_version.pdf).    
+The SIRA data can be downloaded from [here](https://1drv.ms/u/s!Aplan7-8_DG1gUCmsMru6F32i6hT?e=Llw1rp).  
+Please unzip and put it in `SIRA-PCR/PCR/dataset/SIRA`  
+The data should be  organized as follows:  
 ```
 --dataset--SIRA--gt.log
                               |--0a71be67-5024-4b9c-a53f-da0aaa294963--depth_exr--cam0_theta0_phi0--pc.ply
