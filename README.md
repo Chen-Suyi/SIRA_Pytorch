@@ -11,7 +11,9 @@ specifically designed with physically-based and random strategies to arrange div
 Second, we account for variations in different sensing mechanisms and layout placements, then formulate a sim-to-real adaptation framework
 with an adaptive re-sample module to simulate patterns in real point clouds.
 To our best knowledge, this is the first work that explores sim-to-real adaptation for point cloud registration.
-Extensive experiments show the SOTA performance of SIRA-PCR on widely-used indoor and outdoor datasets. 
+Extensive experiments show the SOTA performance of SIRA-PCR on widely-used indoor and outdoor datasets.  
+
+![image text](./files/pipeline.png)
 
 ## Installation
 Please use the following command for installation.  
