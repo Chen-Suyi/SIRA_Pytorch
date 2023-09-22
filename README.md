@@ -67,8 +67,32 @@ We provide pre-trained weights on the [releases](https://github.com/Chen-Suyi/SI
 
 - `ckpt.zip` contains the pre-trained weights for sim-to-real adaptation.<br>Please unzip and put it to `SIRA-PCR/SIRA/experiment/synth2real/ckpt`.
 
-## Training
-### Training on synthetic data
+## SIRA: Sim-to-Real Adaptation
+First, please change the current working directory to `SIRA-PCR/SIRA`.  
+```
+cd /path/to/SIRA-PCR/SIRA
+```
+### Adaptation
+Use the following command to process FlyingShapes data using SIRA:  
+```
+python test.py --ckpt_load=model_best_SIRA.pt
+```
+The results will be in `SIRA-PCR/PCR/dataset/synth2real`.  
+
+### Training
+You can also try training your own SIRA model using the following command:  
+```
+python train.py
+```
+
+## Point Cloud Registration
+First, please change the current working directory to `SIRA-PCR/PCR`.
+```
+cd /path/to/SIRA-PCR/PCR
+```
+
+### Training
+#### Training on synthetic data
 Use the following command for training on FlyingShapes.
 
 ```
@@ -87,21 +111,21 @@ Or use the following command to start from pre-trained weights.
 CUDA_VISIBLE_DEVICES=GPUS python train.py --model_dir=./experiment/experiment_geotransformer/train_on_FlyingShapes_Structured3D/ --resume=./weights/model_best_trained_on_flyingshapes.pth -ow
 ```
 
-### Fine-tuning on SIRA
+#### Fine-tuning on SIRA
 Use the following command for fine-tuning on SIRA.
 
 ```
 CUDA_VISIBLE_DEVICES=GPUS python train.py --model_dir=./experiment/experiment_geotransformer/finetune_on_SIRA/ --resume=./weights/model_best_trained_on_flyingshapes_structured3d.pth -ow
 ```
-### Fine-tuning on 3DMatch
+#### Fine-tuning on 3DMatch
 Use the following command for fine-tuning on 3DMatch.
 
 ```
 CUDA_VISIBLE_DEVICES=GPUS python train.py --model_dir=./experiment/experiment_geotransformer/finetune_on_3DMatch/ --resume=./weights/model_best_trained_on_flyingshapes_structured3d.pth -ow
 ```
 
-## Testing
-### Testing on 3DMatch/3DLoMatch
+### Testing
+#### Testing on 3DMatch/3DLoMatch
 ```
 # 3DMatch
 CUDA_VISIBLE_DEVICES=0 python test.py --model_dir=./experiment/experiment_geotransformer/finetune_on_3DMatch/ --resume=./weights/model_best_finetuned_on_3dmatch.pth --benchmark=3DMatch
@@ -112,7 +136,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py --model_dir=./experiment/experiment_geotra
 CUDA_VISIBLE_DEVICES=0 python eval.py --model_dir=./experiment/experiment_geotransformer/finetune_on_3DMatch/ --benchmark=3DLoMatch --method=lgr
 ```
 
-### Testing on ETH
+#### Testing on ETH
 ```
 CUDA_VISIBLE_DEVICES=0 python test.py --model_dir=./experiment/experiment_geotransformer/test_on_ETH/ --resume=./weights/model_best_finetuned_on_3dmatch.pth --benchmark=ETH
 CUDA_VISIBLE_DEVICES=0 python eval.py --model_dir=./experiment/experiment_geotransformer/test_on_ETH/ --benchmark=ETH --method=lgr
