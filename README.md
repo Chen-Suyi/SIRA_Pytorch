@@ -2,6 +2,17 @@
 
 This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](./files/final_version.pdf).
 
+## Introduction
+Point cloud registration is essential for many applications.
+However, existing real datasets require extremely tedious and costly annotations, yet may not provide accurate camera poses.
+For the synthetic datasets, they are mainly object-level, so the trained models may not generalize well to real scenes.
+First, we build a synthetic scene-level 3D registration dataset, 
+specifically designed with physically-based and random strategies to arrange diverse objects.
+Second, we account for variations in different sensing mechanisms and layout placements, then formulate a sim-to-real adaptation framework
+with an adaptive re-sample module to simulate patterns in real point clouds.
+To our best knowledge, this is the first work that explores sim-to-real adaptation for point cloud registration.
+Extensive experiments show the SOTA performance of SIRA-PCR on widely-used indoor and outdoor datasets. 
+
 ## Installation
 Please use the following command for installation.  
 ```
