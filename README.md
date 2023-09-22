@@ -2,6 +2,28 @@
 
 This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](./files/final_version.pdf).
 
+## Installation
+Please use the following command for installation.  
+```
+# Download the codes
+git clone https://github.com/Chen-Suyi/SIRA_Pytorch.git
+cd SIRA_PCR
+
+# It is recommended to create a new environment
+conda create -n sira python==3.8
+conda activate sira
+
+# Install pytorch
+pip install torch==1.9.1+cu102 torchvision==0.10.1+cu102 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
+
+# Install other packages
+pip install -r requirements.txt
+
+# Install dependencies for Geotransformer
+cd PCR/extensions
+python setup.py build develop
+```
+
 ## Data Preparation
 ### 3DMatch
 The 3DMatch data can be downloaded from [OverlapPredator](https://github.com/prs-eth/OverlapPredator) by running:
