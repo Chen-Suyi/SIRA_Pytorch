@@ -23,7 +23,7 @@ git clone https://github.com/Chen-Suyi/SIRA_Pytorch.git
 cd SIRA_PCR
 
 # It is recommended to create a new environment
-conda create -n sira python==3.8
+conda create -n sira python==3.9
 conda activate sira
 
 # Install pytorch
