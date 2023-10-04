@@ -180,11 +180,12 @@ CUDA_VISIBLE_DEVICES=0 python eval.py --model_dir=./experiment/experiment_geotra
 ## Citation
 
 ```
-@InProceedings{SIRA_2023_ICCV,
+@InProceedings{Chen_2023_ICCV,
     author={Chen, Suyi and Xu, Hao and Li, Ru and Liu, Guanghui and Fu, Chi-Wing and Liu, Shuaicheng},
     title={SIRA-PCR: Sim-to-Real Adaptation for 3D Point Cloud Registration},
     booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
     month={October},
     year={2023},
+    pages={14394-14405}
 }
 ```
