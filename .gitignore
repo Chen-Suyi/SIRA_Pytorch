@@ -3,6 +3,7 @@ build
 *.egg-info
 *.so
 **/__pycache__
+*.zip
 
 # pretrained weights
 PCR/weights/*
