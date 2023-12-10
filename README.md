@@ -1,6 +1,6 @@
 # [ICCV 2023] SIRA-PCR: Sim-to-Real Adaptation for 3D Point Cloud Registration
 
-This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](./files/final_version.pdf).
+This is the Pytorch implementation of our ICCV2023 paper [SIRA-PCR](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_SIRA-PCR_Sim-to-Real_Adaptation_for_3D_Point_Cloud_Registration_ICCV_2023_paper.html).
 
 ## Introduction
 Point cloud registration is essential for many applications.
