@@ -83,7 +83,7 @@ The data should be organized as follows:
 Other datasets will be released soon.  
 
 ### SIRA
-The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data. For more details, please refer to our [paper]([./files/final_version.pdf](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_SIRA-PCR_Sim-to-Real_Adaptation_for_3D_Point_Cloud_Registration_ICCV_2023_paper.html)).    
+The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data. For more details, please refer to our [paper](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_SIRA-PCR_Sim-to-Real_Adaptation_for_3D_Point_Cloud_Registration_ICCV_2023_paper.html).    
 The SIRA data can be downloaded from [here](https://1drv.ms/u/s!Aplan7-8_DG1gUCmsMru6F32i6hT?e=Llw1rp).  
 Please unzip and put it in `SIRA-PCR/PCR/dataset/SIRA`  
 The data should be  organized as follows:  
