@@ -38,6 +38,8 @@ python setup.py build develop
 ```
 
 ## Data Preparation
+*NOTE: Please inform me via issues if the links are expired.*
+
 ### 3DMatch
 The 3DMatch data can be downloaded from [OverlapPredator](https://github.com/prs-eth/OverlapPredator) by running:
 ```
@@ -57,7 +59,7 @@ The data should be organized as follows:
 ```
 
 ### FlyingShapes
-The FlyingShapes data can be downloaded from [here](https://1drv.ms/f/s!AihXv3T-Ry0Hbm1wO2H_d9r7nAg?e=GXltaT).  
+The FlyingShapes data can be downloaded from [here](https://1drv.ms/f/c/072d47fe74bf5728/EihXv3T-Ry0ggAduAAAAAAABi8pnL4xmJchMAJSey_a4Pw?e=cBjnGR).  
 Please unzip and put it in `SIRA-PCR/PCR/dataset/FlyingShapes`  
 The data should be organized as follows:  
 ```
@@ -71,7 +73,7 @@ The data should be organized as follows:
 where the point cloud `pc.ply` is used for point cloud registration training, and the point cloud `pc_tsdf.ply` is used as the input of sim-to-real adaptation.  
 
 ### Structured3D
-The Structured3D data can be downloaded from [here](https://1drv.ms/f/s!AihXv3T-Ry0HcZF1V4vgdb_XXVo?e=VNbt8w).  
+The Structured3D data can be downloaded from [here](https://1drv.ms/f/c/072d47fe74bf5728/EihXv3T-Ry0ggAdxAAAAAAABbu2lNYyhG1bR2Q0rMawMig?e=yRQ1gA).  
 Please unzip and put it in `SIRA-PCR/PCR/dataset/Structured3D`  
 The data should be organized as follows:  
 ```
@@ -84,7 +86,7 @@ Other datasets will be released soon.
 
 ### SIRA
 The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data. For more details, please refer to our [paper](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_SIRA-PCR_Sim-to-Real_Adaptation_for_3D_Point_Cloud_Registration_ICCV_2023_paper.html).    
-The SIRA data can be downloaded from [here](https://1drv.ms/u/s!AihXv3T-Ry0HctMLboZv4OAU10k?e=oMvnhT).  
+The SIRA data can be downloaded from [here](https://1drv.ms/u/c/072d47fe74bf5728/EShXv3T-Ry0ggAdyAAAAAAABSLhIpS2g4SsWrCJwcTDVXw?e=9BB3TO).  
 Please unzip and put it in `SIRA-PCR/PCR/dataset/SIRA`  
 The data should be  organized as follows:  
 ```
