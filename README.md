@@ -81,8 +81,7 @@ The data should be organized as follows:
                       |--scene_00000--485142_0--pc.ply
                       |            |--...
                       |--...
-```
-Other datasets will be released soon.  
+``` 
 
 ### SIRA
 The SIRA data is the result of sim-to-real adaptation, which was processed by our SIRA from part of  FlyingShapes data. For more details, please refer to our [paper](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_SIRA-PCR_Sim-to-Real_Adaptation_for_3D_Point_Cloud_Registration_ICCV_2023_paper.html).    
